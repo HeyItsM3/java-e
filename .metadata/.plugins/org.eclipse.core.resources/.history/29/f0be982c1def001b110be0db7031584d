@@ -1,0 +1,5 @@
+package circec;
+
+public @interface extend {
+
+}

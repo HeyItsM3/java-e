@@ -1,0 +1,19 @@
+package circec;
+
+public class Punto {
+	private double X;
+	private double Y;
+	
+	public Punto(double x, double y) {
+		this.X = x;
+		this.Y = y;
+	}
+	
+	public double getcoordenadaEnX() {
+		return X;
+	}
+	
+	public double getcoordenadaEnY() {
+		return Y;
+	}
+}

@@ -1,0 +1,30 @@
+package circec;
+
+public class Punto {
+	private double X;
+	private double Y;
+	private Punto medio;
+
+	public Punto(double x, double y) {
+		this.X = x;
+		this.Y = y;
+	}
+	
+	public double getcoordenadaEnX() {
+		return X;
+	}
+	
+	public double getcoordenadaEnY() {
+		return Y;
+	}
+	
+	private double getEspacioEntrePuntos(Circulo i) {
+		double x1 = this.medio.getcoordenadaEnX();
+		double y1 = this.medio.getcoordenadaEnY();
+		double x2 = i.medio.getcoordenadaEnX();
+		double y2 = i.medio.getcoordenadaEnY();
+		
+		double distancia = Math.sqrt((x1-x2) * (x1-x2) + (y1 -y2) * (y1 -y2));
+		return distancia;
+	}
+}

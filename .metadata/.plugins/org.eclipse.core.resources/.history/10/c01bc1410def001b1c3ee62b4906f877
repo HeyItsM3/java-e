@@ -1,0 +1,44 @@
+package circec;
+
+public class Circulo {
+	private Punto centro;
+	private double radio;
+	
+	
+	public Circulo(Punto mid, double r) {
+		centro = mid;
+		setRadio(r);
+	}
+	
+	private double getEspacioEntrePuntos(Circulo i) {
+		double x1 = this.centro.getcoordenadaEnX();
+		double y1 = this.centro.getcoordenadaEnY();
+		double x2 = i.centro.getcoordenadaEnX();
+		double y2 = i.centro.getcoordenadaEnY();
+		
+		double distancia = Math.sqrt((x1-x2) * (x1-x2) + (y1 -y2) * (y1 -y2));
+		return distancia;
+	}
+	
+	private double getSumaRadios(Circulo i) {
+		return (double) (this.radio + i.radio);
+	}
+	
+	public boolean intersectaCon(Circulo i) {
+		double distanciaCentros = getEspacioEntrePuntos(i);
+		double sumaRadios = getSumaRadios(i);
+		
+		if (distanciaCentros > sumaRadios) {
+			return false;
+		}
+		return true;
+	}
+	
+	private void setRadio(double r) {
+		if (r<= 0) {
+			Error valorInvalido = new Error("Debes ingresar un radio mayor a 0");
+			throw valorInvalido;
+		}
+		this.radio = r;
+	}
+}

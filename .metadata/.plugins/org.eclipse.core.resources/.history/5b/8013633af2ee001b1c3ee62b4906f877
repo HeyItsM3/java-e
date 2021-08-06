@@ -1,0 +1,10 @@
+package circec;
+
+public class Circulo {
+	private double radio;
+	
+	public Circulo(Punto mid, double rad) {
+		centro = mid;
+		setRadio(rad);
+	}
+}

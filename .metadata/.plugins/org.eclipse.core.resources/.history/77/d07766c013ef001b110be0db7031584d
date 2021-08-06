@@ -1,0 +1,59 @@
+package circec;
+
+public class Circulo {
+
+	private Punto medio;
+	private double radio;
+	
+	private double X;
+	private double Y;
+	
+	public class Punto {
+
+		
+		public Punto(double x, double y) {
+			this.X = x;
+			this.Y = y;
+		}
+		
+		public double getcoordenadaEnX() {
+			return X;
+		}
+		
+		public double getcoordenadaEnY() {
+			return Y;
+		}
+	}
+
+	public Circulo(Punto mid, double r) {
+		medio = mid;
+		setRadio(r);
+	}
+
+	private double getEspacioEntrePuntos(Circulo i) {
+		double xPosit = this.medio.getcoordenadaEnX();
+		double yPosit = this.medio.getcoordenadaEnY();
+		double xNegat = i.medio.getcoordenadaEnX();
+		double yNegat = i.medio.getcoordenadaEnY();
+		double distancia = Math.sqrt((xPosit - xNegat) * (xPosit - xNegat) + (yPosit - yNegat) * (yPosit - yNegat));
+		return distancia;
+	}
+
+	private double getSumaEntreRadios(Circulo i) {
+		return this.radio + i.radio;
+	}
+
+	public boolean intersectaCon(Circulo i) {
+		double distMedios = getEspacioEntrePuntos(i);
+		double sumaDeradios = getSumaEntreRadios(i);
+
+		if (distMedios > sumaDeradios) {
+			return false;
+		}
+		return true;
+	}
+
+	private void setRadio(double rad) {
+		this.radio = rad;
+	}
+}
