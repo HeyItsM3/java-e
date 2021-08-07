@@ -24,4 +24,4 @@ public class Interseccion {
 	// 	System.out.println("-> �Existe Intersecci�n?:");
 	// 	Intersecci�n = C1C2.HayIntersecci�n(DistanciaEntreCentros, 2, 2);
 	// 	System.out.println(Intersecci�n);
-}}
+}
