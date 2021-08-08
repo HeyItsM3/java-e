@@ -1,1 +1,1 @@
-# Java exercise
+# Java exercise Individual
