@@ -12,12 +12,6 @@ public class Cola {
 	public Cola(int valor) {
 		
 	}
-	
-	
-	public void insert(int valor) {
-		Cola nodo = new Cola(valor);
-		
-	}
 
 	public void delete() {
 			
