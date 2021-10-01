@@ -1,0 +1,30 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-17c2e7aea0a-5d4cd7be2730eb9": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "base1.sqbpro",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "D:\\BASES DE DATOS\\base1.sqbpro",
+				"url": "jdbc:sqlite:D:\\BASES DE DATOS\\base1.sqbpro",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
